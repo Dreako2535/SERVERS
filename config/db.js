@@ -2,9 +2,10 @@ const mysql = require('mysql');
 require('dotenv').config();
 
 const db = mysql.createConnection({
-    host: 'localhost', // Usar variable de entorno o valor por defecto
+    host: 'localhost', 
     user:  'root',
     password: '',
+    port: 3306,
     database: 'ecokids'
 });
 
