@@ -33,7 +33,7 @@ exports.registro = async (req, res) => {
         const hashedPassword = await bcrypt.hash(Contraseña, 10);
 
         // Insertar en la base de datos
-        const sql = 'INSERT INTO usuario (Nombre, Edad, Correo, Contraseña) VALUES (?, ?, ?, ?)';
+        const sql = 'INSERT INTO usuario (Nombre, Edad, Correo, Contrasena) VALUES (?, ?, ?, ?)';
         db.query(sql, [Nombre, Edad, Correo, hashedPassword], (err) => {
             if (err) {
                 if (err.code === 'ER_DUP_ENTRY') {

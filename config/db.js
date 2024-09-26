@@ -2,11 +2,11 @@ const mysql = require('mysql');
 require('dotenv').config();
 
 const db = mysql.createConnection({
-    host: 'localhost', 
-    user:  'root',
-    password: '',
+    host: DB_HOST, 
+    user:  DB_USER,
+    password: DB_PASSWORD,
     port: 3306,
-    database: 'ecokids'
+    database: DB_DATABASE
 });
 
 db.connect((err) => {
